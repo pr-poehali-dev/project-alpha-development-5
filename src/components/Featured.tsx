@@ -1,22 +1,74 @@
+const steps = [
+  {
+    number: "01",
+    title: "Заявка",
+    desc: "Вы описываете задачу: тип контента, тон голоса, хронометраж и сроки.",
+  },
+  {
+    number: "02",
+    title: "Согласование",
+    desc: "Обсуждаем детали, подписываем договор, вы присылаете текст.",
+  },
+  {
+    number: "03",
+    title: "Запись",
+    desc: "Записываю голос в профессиональной студии с обработкой и сведением.",
+  },
+  {
+    number: "04",
+    title: "Готово",
+    desc: "Получаете готовый файл в нужном формате. Правки — бесплатно.",
+  },
+];
+
+const services = [
+  "Реклама на радио и ТВ",
+  "Корпоративные презентации",
+  "Обучающие видеокурсы",
+  "Озвучка роликов и подкастов",
+  "IVR и автоответчики",
+  "Аудиокниги и сторис",
+];
+
 export default function Featured() {
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
-      <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
-        <img
-          src="/images/woman-horse.jpg"
-          alt="Woman on horse in countryside"
-          className="w-full h-full object-cover"
-        />
+    <div id="about" className="flex flex-col lg:flex-row min-h-screen bg-white">
+      <div className="flex-1 flex flex-col justify-center px-8 py-16 lg:px-16 lg:py-0">
+        <h3 className="uppercase mb-4 text-xs tracking-[0.3em] text-neutral-500">Схема работы</h3>
+        <h2 className="text-3xl lg:text-5xl mb-12 text-neutral-900 font-bold leading-tight">
+          От заявки до<br />готового звука —<br />4 шага
+        </h2>
+        <div className="flex flex-col gap-8">
+          {steps.map((step) => (
+            <div key={step.number} className="flex gap-6 items-start">
+              <span className="text-3xl font-bold text-neutral-200 w-12 shrink-0">{step.number}</span>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">{step.title}</p>
+                <p className="text-neutral-500 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <a
+          href="#contact"
+          className="mt-12 bg-black text-white border border-black px-6 py-3 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-widest"
+        >
+          Обсудить проект
+        </a>
       </div>
-      <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Функции, которые не стоят на месте</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Не просто список возможностей — живые, дышащие акценты. Каждая функция адаптируется к движению, контексту и настроению,
-          оживляя продукт с первого взгляда.
-        </p>
-        <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Подробнее
-        </button>
+
+      <div className="flex-1 flex flex-col justify-center bg-neutral-950 px-8 py-16 lg:px-16 lg:py-0">
+        <h3 className="uppercase mb-8 text-xs tracking-[0.3em] text-neutral-500">Что озвучиваю</h3>
+        <div className="flex flex-col gap-0">
+          {services.map((s, i) => (
+            <div
+              key={i}
+              className="border-b border-neutral-800 py-5 text-white text-lg font-light hover:text-neutral-300 transition-colors duration-300"
+            >
+              {s}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
