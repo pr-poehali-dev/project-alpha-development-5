@@ -1,3 +1,5 @@
+import ScrollToTop from "@/components/ui/scroll-to-top";
+
 export default function Footer() {
   return (
     <div
@@ -48,7 +50,10 @@ export default function Footer() {
               <h1 className="text-[15vw] sm:text-[13vw] lg:text-[11vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
                 ГОЛОС
               </h1>
-              <p className="text-neutral-500 text-sm sm:text-base">{new Date().getFullYear()} Профессиональный диктор</p>
+              <div className="flex flex-col items-end gap-3">
+                <ScrollToTop dark />
+                <p className="text-neutral-500 text-sm sm:text-base">{new Date().getFullYear()} Профессиональный диктор</p>
+              </div>
             </div>
           </div>
         </div>

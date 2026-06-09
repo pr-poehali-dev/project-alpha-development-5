@@ -1,3 +1,5 @@
+import ScrollToTop from "@/components/ui/scroll-to-top";
+
 const steps = [
   {
     number: "01",
@@ -49,12 +51,15 @@ export default function Featured() {
             </div>
           ))}
         </div>
-        <a
-          href="#contact"
-          className="mt-12 bg-black text-white border border-black px-6 py-3 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-widest"
-        >
-          Обсудить проект
-        </a>
+        <div className="mt-12 flex items-center gap-6">
+          <a
+            href="#contact"
+            className="bg-black text-white border border-black px-6 py-3 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-widest"
+          >
+            Обсудить проект
+          </a>
+          <ScrollToTop />
+        </div>
       </div>
 
       <div className="flex-1 flex flex-col justify-center bg-neutral-950 px-8 py-16 lg:px-16 lg:py-0">

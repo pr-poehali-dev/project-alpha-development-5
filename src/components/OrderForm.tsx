@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollToTop from "@/components/ui/scroll-to-top";
 
 const SEND_ORDER_URL = "https://functions.poehali.dev/f443d4cd-94cc-4423-a230-224569425659";
 
@@ -33,7 +34,10 @@ export default function OrderForm() {
   return (
     <section className="bg-neutral-900 py-20 px-6">
       <div className="max-w-xl mx-auto">
-        <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-4">Заказать озвучку</p>
+        <div className="flex justify-between items-center mb-4">
+          <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Заказать озвучку</p>
+          <ScrollToTop dark />
+        </div>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 leading-tight">
           Расскажите о проекте —<br />я выйду на связь
         </h2>

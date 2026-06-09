@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import ScrollToTop from "@/components/ui/scroll-to-top";
 
 const demos = [
   { label: "Реклама", duration: "0:30" },
@@ -32,9 +33,12 @@ export default function Promo() {
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 left-6 text-white uppercase z-10 text-xs tracking-[0.3em] text-neutral-400">
-        Демо-материалы
-      </h3>
+      <div className="absolute top-12 left-6 right-6 flex justify-between items-center z-10">
+        <h3 className="text-white uppercase text-xs tracking-[0.3em] text-neutral-400">
+          Демо-материалы
+        </h3>
+        <ScrollToTop dark />
+      </div>
 
       <div className="absolute bottom-12 left-6 right-6 z-10 flex flex-col gap-4 max-w-2xl">
         <p className="text-white text-2xl md:text-3xl lg:text-4xl font-light mb-6 leading-snug">
