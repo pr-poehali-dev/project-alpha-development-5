@@ -12,43 +12,35 @@ export default function Footer() {
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-500 text-xs tracking-widest">Контакты</h3>
                 <a
-                  href="mailto:voice@example.com"
+                  href="tel:+79103785868"
                   className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
                 >
-                  voice@example.com
+                  +7-910-378-58-68
                 </a>
                 <a
-                  href="tel:+79001234567"
+                  href="mailto:maslov.voice@gmail.com"
                   className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
                 >
-                  +7 900 123-45-67
+                  maslov.voice@gmail.com
                 </a>
                 <a
-                  href="https://t.me/username"
+                  href="https://t.me/animmax"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
                 >
-                  Telegram
+                  Telegram @animmax
                 </a>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-500 text-xs tracking-widest">Соцсети</h3>
                 <a
-                  href="#"
+                  href="https://vk.com/maslov.voice"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
                 >
                   ВКонтакте
-                </a>
-                <a
-                  href="#"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  YouTube
-                </a>
-                <a
-                  href="#"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Instagram
                 </a>
               </div>
             </div>
