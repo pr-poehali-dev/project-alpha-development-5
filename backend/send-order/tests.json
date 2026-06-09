@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Missing fields",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "", "email": "", "description": ""},
+      "expectedStatus": 400
+    },
+    {
+      "name": "Valid order",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест", "email": "test@example.com", "description": "Нужна озвучка рекламного ролика"},
+      "expectedStatus": 200
+    }
+  ]
+}
